@@ -1,6 +1,10 @@
 import { Box, chakra, Flex, Link } from '@chakra-ui/react';
+import React from 'react';
 
-const Button = (props: { variant?: 'light' | 'dark'; children: string }) => {
+const Button = (props: {
+  variant?: 'light' | 'dark';
+  children: string | React.ReactNode;
+}) => {
   return (
     <Box
       bgGradient='linear(to-br, purple.400, brand.400)'

@@ -1,4 +1,12 @@
-import { Box, chakra, Container, Image, Stack, Text } from '@chakra-ui/react';
+import {
+  Box,
+  chakra,
+  Container,
+  Heading,
+  Image,
+  Stack,
+  Text,
+} from '@chakra-ui/react';
 // Here we have used react-icons package for the icons
 import { FaDatabase } from '@react-icons/all-files/fa/FaDatabase';
 import { FaNetworkWired } from '@react-icons/all-files/fa/FaNetworkWired';
@@ -48,30 +56,15 @@ const CtaLeftAlign = () => {
             overflow='hidden'
           />
           <Stack direction='column' spacing={10} justifyContent='center'>
-            <chakra.h1
-              fontSize='5xl'
-              lineHeight={1}
-              fontWeight='bold'
-              textAlign='left'
-            >
+            <chakra.h1 textStyle='h1' textAlign='left'>
               Lorem ipsum
-              <chakra.span
-                bgGradient='linear(to-br, purple.400, brand.400)'
-                bgClip='text'
-              >
+              <chakra.span textStyle='gradient'>
                 {' '}
                 dolor sit amet{' '}
               </chakra.span>{' '}
               <br /> ut labore magna aliqua
             </chakra.h1>
-            <Text
-              color='gray.500'
-              fontSize='lg'
-              textAlign='left'
-              fontWeight='light'
-              lineHeight='taller'
-              maxW='700px'
-            >
+            <Text maxW='700px'>
               Officia in impedit commodi saepe voluptas sed culpa vero, qui
               aliquid error optio cupiditate, ea odit. Voluptatum voluptates
               animi explicabo repellendus corrupti!
@@ -85,13 +78,9 @@ const CtaLeftAlign = () => {
                 <Stack key={index} direction='row' spacing={2}>
                   <Icon size={32}>{feature.icon}</Icon>
                   <Stack direction='column' spacing={0}>
-                    <Text fontSize='md' fontWeight='500'>
-                      {feature.title}
-                    </Text>
+                    <Text variant='feature'>{feature.title}</Text>
                     <Text
-                      fontSize='sm'
-                      color='gray.500'
-                      lineHeight='tall'
+                      variant='details'
                       maxW={{ base: '100%', lg: '200px' }}
                     >
                       {feature.detail}
@@ -102,7 +91,7 @@ const CtaLeftAlign = () => {
             </Stack>
             <Stack
               direction={{ base: 'column', sm: 'row' }}
-              spacing={{ base: 0, sm: 2 }}
+              spacing={{ base: 4, lg: 8 }}
               flexWrap='wrap'
             >
               <Button>Get Started</Button>

@@ -14,6 +14,43 @@ const theme = extendTheme({
       800: '#086F83',
       900: '#065666',
     },
+    chalkboard: '#18191d',
+  },
+  textStyles: {
+    h1: {
+      fontSize: '5xl',
+      color: 'chalkboard',
+      fontWeight: 'bold',
+      lineHeight: 1,
+    },
+    h2: {
+      fontSize: ['3xl', , '5xl'],
+      fontWeight: 'bold',
+    },
+    gradient: {
+      bgGradient: 'linear(to-br, purple.400, brand.400)',
+      bgClip: 'text',
+    },
+    link: {
+      transition: '250ms ease-in-out',
+      _hover: { color: 'brand.500' },
+      _groupHover: { color: 'brand.500' },
+    },
+  },
+  components: {
+    Text: {
+      baseStyle: {
+        color: 'blackAlpha.600',
+        fontWeight: 'light',
+        letterSpacing: 'wide',
+        lineHeight: 'taller',
+      },
+      variants: {
+        feature: { color: 'chalkboard', fontWeight: 'bold' },
+        details: { color: 'blackAlpha.600' },
+        upperWide: { textTransform: 'uppercase', letterSpacing: 6 },
+      },
+    },
   },
 });
 

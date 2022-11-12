@@ -2,24 +2,18 @@ import {
   Box,
   Flex,
   HStack,
-  Button,
-  Text,
-  Link,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  Stack,
   Icon,
   IconButton,
-  useDisclosure,
+  Link,
+  MenuItem,
+  Stack,
+  Text,
   useColorModeValue,
-  Grid,
+  useDisclosure,
 } from '@chakra-ui/react';
 // Here we have used react-icons package for the icons
-import { GiHamburgerMenu } from '@react-icons/all-files/gi/GiHamburgerMenu';
 import { AiOutlineClose } from '@react-icons/all-files/ai/AiOutlineClose';
-import { BiChevronDown } from '@react-icons/all-files/bi/BiChevronDown';
+import { GiHamburgerMenu } from '@react-icons/all-files/gi/GiHamburgerMenu';
 import { RiFlashlightFill } from '@react-icons/all-files/ri/RiFlashlightFill';
 
 const navLinks = [

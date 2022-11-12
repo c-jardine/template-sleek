@@ -4,6 +4,7 @@ import {
   Flex,
   Grid,
   GridItem,
+  Icon as ChakraIcon,
   Link,
   Text,
 } from '@chakra-ui/react';
@@ -12,6 +13,7 @@ import { BsArrowRight } from '@react-icons/all-files/bs/BsArrowRight';
 import { FaBolt } from '@react-icons/all-files/fa/FaBolt';
 import { FaSearch } from '@react-icons/all-files/fa/FaSearch';
 import { FaUsers } from '@react-icons/all-files/fa/FaUsers';
+import { Header } from '../../core/Header';
 import { Icon } from '../../core/Icon';
 
 interface IFeature {
@@ -42,29 +44,13 @@ const features: IFeature[] = [
 
 const FeatureCards = () => {
   return (
-    <Container maxW='6xl' p={{ base: 5, md: 10 }}>
-      <Text textTransform='uppercase' textAlign='center' letterSpacing={6}>
-        Lorem ipsum
-      </Text>
-      <chakra.h2
-        fontSize={{ base: '3xl', md: '5xl' }}
-        fontWeight='bold'
-        mb={16}
-        textAlign='center'
-      >
-        <chakra.span
-          bgGradient='linear(to-br, purple.400, brand.400)'
-          bgClip='text'
-        >
-          Quasi maiores cupiditate id minus porro voluptates a nostrum ipsum
-          dolor nesciunt
-        </chakra.span>
-      </chakra.h2>
-      <Grid
-        // templateColumns={{ base: '1fr', sm: '1fr 1fr', md: '1fr 1fr 1fr' }}
-        gap={8}
-        placeItems='center'
-      >
+    <Container maxW='6xl' px={{ base: 5, md: 10 }}>
+      <Header
+        subtitle='Lorem ipsum'
+        title='Quasi maiores cupiditate id minus porro voluptates a nostrum ipsum
+          dolor nesciunt'
+      />
+      <Grid gap={8} placeItems='center'>
         {features.map((feature, index) => (
           <GridItem
             key={index}
@@ -90,16 +76,7 @@ const FeatureCards = () => {
             <chakra.h3 fontSize='xl' mt={6} letterSpacing='wide'>
               {feature.heading}
             </chakra.h3>
-            <Text
-              fontSize='md'
-              mt={4}
-              color='blackAlpha.600'
-              fontWeight='light'
-              letterSpacing='wide'
-              lineHeight='taller'
-            >
-              {feature.content}
-            </Text>
+            <Text mt={4}>{feature.content}</Text>
           </GridItem>
         ))}
       </Grid>
@@ -109,26 +86,13 @@ const FeatureCards = () => {
         alignItems='center'
         gap={2}
         w='fit-content'
-        mt={{ base: 16, lg: -4 }}
+        mt={{ base: 16, lg: -6 }}
         role='group'
       >
-        <Text
-          textTransform='uppercase'
-          letterSpacing={6}
-          fontSize='sm'
-          _groupHover={{
-            color: 'brand.500',
-          }}
-          transition='150ms ease-in-out'
-        >
+        <Text textStyle='link' variant='upperWide'>
           Learn more
         </Text>
-        <chakra.span
-          _groupHover={{ color: 'brand.500' }}
-          transition='150ms ease-in-out'
-        >
-          <BsArrowRight size={20} />
-        </chakra.span>
+        <ChakraIcon as={BsArrowRight} h={5} w={5} />
       </Link>
     </Container>
   );
