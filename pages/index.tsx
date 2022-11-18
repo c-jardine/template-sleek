@@ -1,18 +1,15 @@
-import { Box, Flex, Image, SimpleGrid, Stack, Text } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 import { BlogCards } from '../src/components/cards/BlogCards';
-import { Card } from '../src/components/core/Card';
-import { Header } from '../src/components/core/Header';
-import { Testimonial } from '../src/components/core/Testimonial';
 import { CtaLeftAlign } from '../src/components/ctas';
 import { Banner } from '../src/components/ctas/Banner';
 import { FeatureCards } from '../src/components/features';
 import { FullImageStats } from '../src/components/stats/FullImageStats';
 import { Testimonials } from '../src/components/testimonials';
-import { MainLayout } from '../src/layouts/MainLayout';
+import { PageLayout } from '../src/layouts/PageLayout';
 
 export default function Home() {
   return (
-    <MainLayout>
+    <PageLayout>
       <CtaLeftAlign />
       <FeatureCards />
       <FullImageStats />
@@ -27,6 +24,6 @@ export default function Home() {
         />
       </Flex>
       <Banner />
-    </MainLayout>
+    </PageLayout>
   );
 }

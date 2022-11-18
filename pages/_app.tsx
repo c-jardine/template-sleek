@@ -10,7 +10,6 @@ import type { AppProps } from 'next/app';
 import React from 'react';
 import { Footer } from '../src/components/core/Footer';
 import { Navbar } from '../src/components/core/Navbar';
-import { MainLayout } from '../src/layouts/MainLayout';
 import '../src/styles/globals.css';
 import chakraTheme from '../src/styles/theme/theme';
 
