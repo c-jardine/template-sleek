@@ -15,6 +15,7 @@ import {
 import { AiOutlineClose } from '@react-icons/all-files/ai/AiOutlineClose';
 import { GiHamburgerMenu } from '@react-icons/all-files/gi/GiHamburgerMenu';
 import { RiFlashlightFill } from '@react-icons/all-files/ri/RiFlashlightFill';
+import { useRouter } from 'next/router';
 
 const navLinks = [
   { name: 'Home', path: '/' },
@@ -94,10 +95,12 @@ interface NavLinkProps {
 }
 
 const NavLink = ({ name, path, onClose }: NavLinkProps) => {
+  const router = useRouter();
   return (
     <Link
       href={path}
       lineHeight='inherit'
+      color={router.pathname === path ? 'brand.500' : 'black'}
       _hover={{
         color: 'brand.500',
       }}
