@@ -19,8 +19,8 @@ const Banner = () => {
       rounded='lg'
     >
       <Box>
-        <chakra.h2 textStyle='h2'>Ready to get started?</chakra.h2>
-        <Text variant='feature' textStyle='gradient' fontSize={24}>
+        <chakra.h2 textStyle='h2' color='headerText'>Ready to get started?</chakra.h2>
+        <Text variant='feature' color='bodyText' fontSize={24}>
           Get in touch or read more.
         </Text>
       </Box>

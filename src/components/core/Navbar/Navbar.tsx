@@ -36,9 +36,9 @@ const Navbar = () => {
       zIndex={50}
       width='100vw'
       px={4}
-      bg='white'
+      bg='background'
       borderBottom={'2px solid'}
-      borderColor='blackAlpha.200'
+      borderColor='subtleText'
       textTransform='uppercase'
       fontSize='sm'
       letterSpacing={4}
@@ -50,7 +50,7 @@ const Navbar = () => {
         maxW='8xl'
         marginX='auto'
       >
-        <Icon as={RiFlashlightFill} h={8} w={8} />
+        <Icon as={RiFlashlightFill} h={8} w={8} color='brand.500' />
 
         <HStack spacing={8} alignItems='center'>
           <HStack
@@ -100,7 +100,7 @@ const NavLink = ({ name, path, onClose }: NavLinkProps) => {
     <Link
       href={path}
       lineHeight='inherit'
-      color={router.pathname === path ? 'brand.500' : 'black'}
+      color={router.pathname === path ? 'brand.500' : 'bodyText'}
       _hover={{
         color: 'brand.500',
       }}

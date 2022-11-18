@@ -1,12 +1,4 @@
-import {
-  Box,
-  chakra,
-  Container,
-  Heading,
-  Image,
-  Stack,
-  Text,
-} from '@chakra-ui/react';
+import { Box, chakra, Container, Image, Stack, Text } from '@chakra-ui/react';
 // Here we have used react-icons package for the icons
 import { FaDatabase } from '@react-icons/all-files/fa/FaDatabase';
 import { FaNetworkWired } from '@react-icons/all-files/fa/FaNetworkWired';
@@ -27,12 +19,12 @@ const features = [
 ];
 const CtaLeftAlign = () => {
   return (
-    <Box w='100vw' h={{ lg: '100vh' }}>
+    <Box w='100vw' h={{ lg: '100vh' }} mt={-12}>
       <Box
         display={{ base: 'none', lg: 'block' }}
         w='33%'
         h='100vh'
-        bg='gray.100'
+        bg='cardBackground'
         position='absolute'
       />
       <Container
@@ -56,7 +48,7 @@ const CtaLeftAlign = () => {
             overflow='hidden'
           />
           <Stack direction='column' spacing={10} justifyContent='center'>
-            <chakra.h1 textStyle='h1' textAlign='left'>
+            <chakra.h1 textStyle='h1' textAlign='left' color='headerText'>
               Lorem ipsum
               <chakra.span textStyle='gradient'>
                 {' '}
@@ -64,7 +56,7 @@ const CtaLeftAlign = () => {
               </chakra.span>{' '}
               <br /> ut labore magna aliqua
             </chakra.h1>
-            <Text maxW='700px'>
+            <Text maxW='700px' color='bodyText'>
               Officia in impedit commodi saepe voluptas sed culpa vero, qui
               aliquid error optio cupiditate, ea odit. Voluptatum voluptates
               animi explicabo repellendus corrupti!
@@ -78,10 +70,13 @@ const CtaLeftAlign = () => {
                 <Stack key={index} direction='row' spacing={2}>
                   <Icon size={32}>{feature.icon}</Icon>
                   <Stack direction='column' spacing={0}>
-                    <Text variant='feature'>{feature.title}</Text>
+                    <Text variant='feature' color='headerText'>
+                      {feature.title}
+                    </Text>
                     <Text
                       variant='details'
                       maxW={{ base: '100%', lg: '200px' }}
+                      color='bodyText'
                     >
                       {feature.detail}
                     </Text>
@@ -94,8 +89,12 @@ const CtaLeftAlign = () => {
               spacing={{ base: 4, lg: 8 }}
               flexWrap='wrap'
             >
-              <Button>Get Started</Button>
-              <Button variant='light'>View Prices</Button>
+              <Button ariaLabel='Go to the Get Started page'>
+                Get Started
+              </Button>
+              <Button ariaLabel='Go to the pricing page' variant='light'>
+                View Prices
+              </Button>
             </Stack>
           </Stack>
         </Stack>

@@ -9,6 +9,7 @@ import {
   VStack,
 } from '@chakra-ui/react';
 // Here we have used react-icons package for the icon
+import { FaQuoteLeft } from '@react-icons/all-files/fa/FaQuoteLeft';
 import { FaQuoteRight } from '@react-icons/all-files/fa/FaQuoteRight';
 import { TestimonialProps } from './Testimonial.types';
 
@@ -21,15 +22,18 @@ const Testimonial = (props: TestimonialProps) => {
         // p={{ base: 10, md: 14 }}
         bgGradient='linear(to-br, purple.400, brand.400)'
       >
-        <VStack spacing={3} p={4} bg='white' pos='relative'>
+        <VStack spacing={3} p={4} bg='background' pos='relative'>
           <Icon
-            as={FaQuoteRight}
+            as={FaQuoteLeft}
             w={8}
             h={8}
+            bg='background'
+            px={1}
             color='brand.500'
             position='absolute'
-            top={-5}
-            left={-4}
+            zIndex={1}
+            top={-4}
+            left={4}
           />
           <Stack direction='column' spacing={5} padding={4}>
             <Text variant='details'>{props.content}</Text>

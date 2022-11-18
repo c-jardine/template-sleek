@@ -7,7 +7,7 @@ const Header = (props: HeaderProps) => {
       <Text variant='upperWide' textAlign='center'>
         {props.subtitle}
       </Text>
-      <chakra.h2 textStyle={['h2', 'gradient']} mb={28} textAlign='center'>
+      <chakra.h2 textStyle={['h2', 'gradient']} mb={16} textAlign='center'>
         {props.title}
       </chakra.h2>
     </Box>

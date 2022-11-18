@@ -8,10 +8,11 @@ import { Banner } from '../src/components/ctas/Banner';
 import { FeatureCards } from '../src/components/features';
 import { FullImageStats } from '../src/components/stats/FullImageStats';
 import { Testimonials } from '../src/components/testimonials';
+import { MainLayout } from '../src/layouts/MainLayout';
 
 export default function Home() {
   return (
-    <>
+    <MainLayout>
       <CtaLeftAlign />
       <FeatureCards />
       <FullImageStats />
@@ -26,6 +27,6 @@ export default function Home() {
         />
       </Flex>
       <Banner />
-    </>
+    </MainLayout>
   );
 }

@@ -54,13 +54,13 @@ const FeatureCards = () => {
         {features.map((feature, index) => (
           <GridItem
             key={index}
-            bg={index === 1 ? 'transparent' : 'blackAlpha.50'}
+            bg={index === 1 ? 'transparent' : 'cardBackground'}
             p={12}
             justifyContent='center'
             textAlign='center'
             pos='relative'
             border={index === 1 ? '1px solid' : 'none'}
-            borderColor='blackAlpha.100'
+            borderColor='cardBackground'
             rowSpan={4}
             colSpan={12}
             gridRowStart={
@@ -73,7 +73,12 @@ const FeatureCards = () => {
             <Flex justifyContent='center'>
               <Icon size={32}>{feature.icon}</Icon>
             </Flex>
-            <chakra.h3 fontSize='xl' mt={6} letterSpacing='wide'>
+            <chakra.h3
+              fontSize='xl'
+              mt={6}
+              letterSpacing='wide'
+              color='headerText'
+            >
               {feature.heading}
             </chakra.h3>
             <Text mt={4}>{feature.content}</Text>
@@ -89,10 +94,10 @@ const FeatureCards = () => {
         mt={{ base: 16, lg: -6 }}
         role='group'
       >
-        <Text textStyle='link' variant='upperWide'>
+        <Text textStyle='link' variant='upperWide' color='headerText'>
           Learn more
         </Text>
-        <ChakraIcon as={BsArrowRight} h={5} w={5} />
+        <ChakraIcon as={BsArrowRight} h={5} w={5} color='bodyText' />
       </Link>
     </Container>
   );
