@@ -7,7 +7,7 @@ import { FullImageStats } from '../src/components/stats/FullImageStats';
 import { Testimonials } from '../src/components/testimonials';
 import { PageLayout } from '../src/layouts/PageLayout';
 
-export default function Home() {
+const HomePage = () => {
   return (
     <PageLayout>
       <CtaLeftAlign />
@@ -26,4 +26,6 @@ export default function Home() {
       <Banner />
     </PageLayout>
   );
-}
+};
+
+export default HomePage;

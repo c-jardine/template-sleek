@@ -20,7 +20,7 @@ const Button = (props: {
       <Flex
         justify='center'
         bg={
-          (props.variant === 'light' && 'cardBackground') ||
+          (props.variant === 'light' && 'background') ||
           (props.variant === 'dark' && 'whiteAlpha.50') ||
           'whiteAlpha.50'
         }

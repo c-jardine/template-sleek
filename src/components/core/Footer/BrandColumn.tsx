@@ -27,10 +27,10 @@ const SocialButton = ({
 }) => {
   return (
     <chakra.button
-      bg='whiteAlpha.400'
+      bg='socialBackground'
       rounded={'full'}
-      w={8}
-      h={8}
+      w={10}
+      h={10}
       cursor={'pointer'}
       as={'a'}
       href={href}
