@@ -17,7 +17,7 @@ const AppWrapper = (props) => {
 
   return (
     <ChakraProvider
-      theme={darkMode ? chakraTheme.lightTheme : chakraTheme.darkTheme}
+      theme={darkMode ? chakraTheme.darkTheme : chakraTheme.lightTheme}
     >
       <Box
         as={ChakraButton}
@@ -26,7 +26,7 @@ const AppWrapper = (props) => {
         justifyContent='center'
         alignItems='center'
         zIndex={100}
-        bg={darkMode ? 'yellow.400' : 'purple.900'}
+        bg={darkMode ? 'purple.900' : 'yellow.400'}
         shadow='dark-lg'
         w={14}
         h={14}
@@ -37,9 +37,9 @@ const AppWrapper = (props) => {
         onClick={() => dispatch(asyncToggleTheme())}
       >
         {darkMode ? (
-          <Icon as={FaSun} w={6} h={6} color='white' />
-        ) : (
           <Icon as={FaMoon} w={6} h={6} color='white' />
+        ) : (
+          <Icon as={FaSun} w={6} h={6} color='white' />
         )}
       </Box>
       {props.children}

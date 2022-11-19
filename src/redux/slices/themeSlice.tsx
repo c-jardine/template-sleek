@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { CookieValueTypes, getCookie, setCookie } from 'cookies-next';
+import { CookieValueTypes, getCookie, hasCookie, setCookie } from 'cookies-next';
 
 export enum Theme {
   LIGHT,
@@ -11,7 +11,7 @@ export interface ThemeSliceProps {
 }
 
 const initialState: ThemeSliceProps = {
-  darkMode: getCookie('darkMode'),
+  darkMode: hasCookie('darkMode') ? getCookie('darkMode') : false,
 };
 
 export const asyncToggleTheme = () => (dispatch) => {
