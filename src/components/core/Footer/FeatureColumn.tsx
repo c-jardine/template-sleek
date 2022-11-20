@@ -12,7 +12,9 @@ const FeatureColumn = () => {
           <Box w={24} h={16} overflow='hidden'>
             <Image
               src='https://images.unsplash.com/photo-1576613109753-27804de2cba8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
+              alt=''
               objectFit='cover'
+              filter='saturate(50%)'
             />
           </Box>
           <Box>
@@ -34,7 +36,9 @@ const FeatureColumn = () => {
           <Box w={24} h={16} overflow='hidden'>
             <Image
               src='https://images.unsplash.com/photo-1597424216809-3ba9864aeb18?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80'
+              alt=''
               objectFit='cover'
+              filter='saturate(50%)'
             />
           </Box>
           <Box>

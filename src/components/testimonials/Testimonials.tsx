@@ -28,6 +28,7 @@ const Testimonials = () => {
   return (
     <Box px={{ base: 5, md: 10 }}>
       <Header
+        center
         subtitle='Excepturi'
         title='Cupidatat nisi velit qui nisi anim mollit amet'
         description='Pariatur proident proident excepteur nisi adipisicing amet. Tempor tempor cillum aliquip velit ullamco ea. Anim quis nisi Lorem dolore cupidatat duis aliquip aute exercitation nostrud ullamco amet pariatur excepteur.'

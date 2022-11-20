@@ -3,7 +3,7 @@ import { HeaderProps } from './Header.types';
 
 const Header = (props: HeaderProps) => {
   return (
-    <Box maxW='4xl' w='full' mx='auto'>
+    <Box position='relative' maxW='4xl' w='full' mx='auto'>
       <Text variant='upperWide' textAlign={!props.center ? 'left' : 'center'}>
         {props.subtitle}
       </Text>

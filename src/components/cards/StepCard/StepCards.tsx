@@ -31,6 +31,7 @@ const StepCards = () => {
   return (
     <Container maxW='6xl' px={{ base: 5, md: 10 }}>
       <Header
+        center
         subtitle='Unde minima'
         title='A delectus excepturi cumque aliquam voluptatibus sit quia'
         description='Mollit consequat nostrud ipsum ad excepteur non pariatur anim nostrud. Cupidatat officia cillum laborum cupidatat magna. Dolore voluptate fugiat duis ut ad. Cupidatat quis excepteur anim officia commodo. Sit cupidatat mollit pariatur Lorem ipsum quis eu magna occaecat occaecat sint proident veniam. Commodo voluptate nostrud labore elit id reprehenderit nostrud.'

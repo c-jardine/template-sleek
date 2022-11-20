@@ -46,6 +46,7 @@ const FeatureCards = () => {
   return (
     <Container maxW='8xl' px={{ base: 5, md: 10 }}>
       <Header
+        center
         subtitle='Lorem ipsum'
         title='Quasi maiores cupiditate id minus porro voluptates a nostrum ipsum
           dolor nesciunt'
