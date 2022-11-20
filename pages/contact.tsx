@@ -1,4 +1,5 @@
 import { Box, chakra, SimpleGrid, Stack, Text } from '@chakra-ui/react';
+import { NextPage } from 'next';
 import { Parallax } from 'react-scroll-parallax';
 import { Button } from '../src/components/core/Button';
 import { Header } from '../src/components/core/Header';
@@ -7,7 +8,7 @@ import { Location } from '../src/components/core/Location';
 import { Textarea } from '../src/components/core/Textarea';
 import { PageLayout } from '../src/layouts/PageLayout';
 
-const ContactPage = () => {
+const ContactPage: NextPage = () => {
   return (
     <PageLayout>
       <Box position='sticky' top={32} zIndex={0} px={{ base: 4, lg: 0 }}>

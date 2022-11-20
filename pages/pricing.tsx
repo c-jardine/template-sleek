@@ -1,11 +1,13 @@
 import { Box } from '@chakra-ui/react';
 import { NextPage } from 'next';
 import { Parallax } from 'react-scroll-parallax';
+import { Prices } from '../lib/prices';
 import { Header } from '../src/components/core/Header';
-import { ServiceCards } from '../src/components/sections/ServiceCards';
+import { Banner } from '../src/components/ctas/Banner';
+import { PriceCards } from '../src/components/sections/PriceCards';
 import { PageLayout } from '../src/layouts/PageLayout';
 
-const Services: NextPage = () => {
+const Pricing: NextPage = () => {
   return (
     <PageLayout>
       <Box position='sticky' top={32} zIndex={0} px={{ base: 4, lg: 0 }}>
@@ -13,23 +15,26 @@ const Services: NextPage = () => {
           <Box my={16}>
             <Header
               center
-              title='Aute veniam lorem eiusmod deserunt'
-              subtitle='Services'
-              description='Occaecat id nulla esse elit. Deserunt eu eiusmod adipisicing duis do aliquip ut esse pariatur consequat. Nostrud sunt officia ea velit culpa qui excepteur quis velit labore tempor ut commodo esse.'
+              title='Sit consequat occaecat adipisicing nulla'
+              subtitle='Pricing'
+              description='Amet nulla ea mollit sunt labore consectetur laboris minim id duis cillum. Aute consectetur commodo eu qui Lorem. Ad enim aute commodo excepteur commodo eiusmod non ipsum pariatur consequat.'
             />
           </Box>
         </Parallax>
       </Box>
       <Box
+        py={16}
         position='relative'
         zIndex={1}
         w='100vw'
         style={{ WebkitTransform: 'translate3d(0,0,0)' }}
+        bg='cardBackground'
       >
-        <ServiceCards />
+        <PriceCards prices={Prices} />
       </Box>
+      <Banner />
     </PageLayout>
   );
 };
 
-export default Services;
+export default Pricing;

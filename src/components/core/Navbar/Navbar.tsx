@@ -19,8 +19,8 @@ import logo from '/public/logo.png';
 
 const navLinks = [
   { name: 'Home', path: '/' },
-  { name: 'Work', path: '/work' },
   { name: 'Services', path: '/services' },
+  { name: 'Pricing', path: '/pricing' },
   { name: 'Blog', path: '/blog' },
   { name: 'About', path: '/about' },
   { name: 'Contact', path: '/contact' },

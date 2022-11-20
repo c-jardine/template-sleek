@@ -19,7 +19,7 @@ const Input = (props: InputProps & { label: string }) => {
     >
       <FormControl>
         <FormLabel
-          bg='background'
+          bg='cardBackground'
           color={focused ? 'brand.500' : 'bodyText'}
           position='absolute'
           top={2}

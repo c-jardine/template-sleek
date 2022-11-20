@@ -1,4 +1,10 @@
-import { Box, chakra, Flex, Link as ChakraLink } from '@chakra-ui/react';
+import {
+  Box,
+  BoxProps,
+  chakra,
+  Flex,
+  Link as ChakraLink,
+} from '@chakra-ui/react';
 import React from 'react';
 
 const Button = (props: {
@@ -6,6 +12,7 @@ const Button = (props: {
   href?: string;
   ariaLabel: string;
   children: string | React.ReactNode;
+  style?: BoxProps;
 }) => {
   return (
     <Box
@@ -16,6 +23,7 @@ const Button = (props: {
       h={12}
       style={{ padding: 1 }}
       role='group'
+      {...props.style}
     >
       <Flex
         justify='center'
