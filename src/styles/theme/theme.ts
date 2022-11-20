@@ -23,9 +23,9 @@ const textStyles = {
     bgClip: 'text',
   },
   link: {
-    transition: '200ms ease-in-out',
-    _hover: { color: 'brand.500' },
-    _groupHover: { color: 'brand.500' },
+    transition: '200ms ease-in-out !important',
+    _hover: { color: 'brand.500 !important' },
+    _groupHover: { color: 'brand.500 !important' },
   },
 };
 

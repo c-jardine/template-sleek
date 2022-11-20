@@ -15,7 +15,7 @@ import { TestimonialProps } from './Testimonial.types';
 
 const Testimonial = (props: TestimonialProps) => {
   return (
-    <Box px={8}>
+    <Box>
       <Container
         style={{ padding: 1 }}
         // maxW='5xl'
@@ -48,7 +48,12 @@ const Testimonial = (props: TestimonialProps) => {
             right={-4}
             bottom={-4}
           >
-            <Avatar name='avatar' src={props.image} size='lg' />
+            <Avatar
+              name='avatar'
+              src={props.image}
+              size='lg'
+              filter='saturate(50%)'
+            />
           </Circle>
         </VStack>
       </Container>

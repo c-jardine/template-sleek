@@ -1,9 +1,18 @@
-import { Box, chakra, Container, Image, Stack, Text } from '@chakra-ui/react';
+import {
+  Box,
+  chakra,
+  Container,
+  Grid,
+  Icon,
+  Image,
+  Stack,
+  Text,
+} from '@chakra-ui/react';
 // Here we have used react-icons package for the icons
+import { GridItem, SimpleGrid } from '@chakra-ui/react';
 import { FaDatabase } from '@react-icons/all-files/fa/FaDatabase';
 import { FaNetworkWired } from '@react-icons/all-files/fa/FaNetworkWired';
 import { Button } from '../../core/Button';
-import { Icon } from '../../core/Icon';
 
 const features = [
   {
@@ -46,6 +55,7 @@ const CtaLeftAlign = () => {
             alt='People consulting at a desk'
             rounded='lg'
             overflow='hidden'
+            filter='saturate(50%)'
           />
           <Stack direction='column' spacing={10} justifyContent='center'>
             <chakra.h1 textStyle='h1' textAlign='left' color='headerText'>
@@ -61,29 +71,29 @@ const CtaLeftAlign = () => {
               aliquid error optio cupiditate, ea odit. Voluptatum voluptates
               animi explicabo repellendus corrupti!
             </Text>
-            <Stack
-              direction={{ base: 'column', lg: 'row' }}
-              spacing={{ base: 5, md: 10 }}
-              flexWrap='wrap'
-            >
+            <SimpleGrid columns={{ base: 1, md: 2 }} gap={8}>
               {features.map((feature, index) => (
-                <Stack key={index} direction='row' spacing={2}>
-                  <Icon size={32}>{feature.icon}</Icon>
-                  <Stack direction='column' spacing={0}>
+                <Grid key={index} templateColumns={'auto 1fr'} gap={4}>
+                  <GridItem>
+                    <Icon
+                      as={feature.icon}
+                      w={6}
+                      h={6}
+                      color='brand.500'
+                      mt={1}
+                    />
+                  </GridItem>
+                  <GridItem w='full'>
                     <Text variant='feature' color='headerText'>
                       {feature.title}
                     </Text>
-                    <Text
-                      variant='details'
-                      maxW={{ base: '100%', lg: '200px' }}
-                      color='bodyText'
-                    >
+                    <Text variant='details' color='bodyText'>
                       {feature.detail}
                     </Text>
-                  </Stack>
-                </Stack>
+                  </GridItem>
+                </Grid>
               ))}
-            </Stack>
+            </SimpleGrid>
             <Stack
               direction={{ base: 'column', sm: 'row' }}
               spacing={{ base: 4, lg: 8 }}

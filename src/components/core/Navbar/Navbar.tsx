@@ -2,7 +2,6 @@ import {
   Box,
   Flex,
   HStack,
-  Icon,
   IconButton,
   Link,
   MenuItem,
@@ -14,8 +13,9 @@ import {
 // Here we have used react-icons package for the icons
 import { AiOutlineClose } from '@react-icons/all-files/ai/AiOutlineClose';
 import { GiHamburgerMenu } from '@react-icons/all-files/gi/GiHamburgerMenu';
-import { RiFlashlightFill } from '@react-icons/all-files/ri/RiFlashlightFill';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
+import logo from '/public/logo.png';
 
 const navLinks = [
   { name: 'Home', path: '/' },
@@ -36,9 +36,10 @@ const Navbar = () => {
       zIndex={50}
       width='100vw'
       px={4}
-      bg='background'
+      bg='cardBackground'
       borderBottom={'2px solid'}
-      borderColor='subtleText'
+      borderColor='background'
+      shadow='md'
       textTransform='uppercase'
       fontSize='sm'
       letterSpacing={4}
@@ -50,7 +51,25 @@ const Navbar = () => {
         maxW='8xl'
         marginX='auto'
       >
-        <Icon as={RiFlashlightFill} h={8} w={8} color='brand.500' />
+        <Flex alignItems='center' gap={4}>
+          <Image
+            src={logo}
+            alt='Logo'
+            style={{
+              objectFit: 'contain',
+              height: '2rem',
+              width: 'fit-content',
+            }}
+          />
+          <Text
+            fontSize='xl'
+            letterSpacing='widest'
+            textTransform='uppercase'
+            color='headerText !important'
+          >
+            Logoipsum
+          </Text>
+        </Flex>
 
         <HStack spacing={8} alignItems='center'>
           <HStack
@@ -65,11 +84,15 @@ const Navbar = () => {
           </HStack>
         </HStack>
         <IconButton
-          size='md'
+          bg='transparent'
+          color='headerText'
+          size='lg'
           icon={isOpen ? <AiOutlineClose /> : <GiHamburgerMenu />}
           aria-label='Open Menu'
           display={{ base: 'inherit', md: 'none' }}
           onClick={isOpen ? onClose : onOpen}
+          _hover={{ bg: 'transparent' }}
+          _focus={{ bg: 'transparent' }}
         />
       </Flex>
 
@@ -99,6 +122,7 @@ const NavLink = ({ name, path, onClose }: NavLinkProps) => {
   return (
     <Link
       href={path}
+      py={2}
       lineHeight='inherit'
       color={router.pathname === path ? 'brand.500' : 'bodyText'}
       _hover={{
