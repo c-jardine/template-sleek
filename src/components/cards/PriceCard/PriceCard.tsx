@@ -16,6 +16,8 @@ import { PriceProps } from '../../../../lib/prices/Price.types';
 const PriceCard = (props: PriceProps) => {
   return (
     <Flex
+      position='relative'
+      zIndex={props.id === 1 && 1}
       transform={props.id === 1 && { lg: 'scale(1.1)' }}
       style={{ padding: props.id === 1 && '2px' }}
       bgGradient={props.id === 1 && 'linear(to-br, purple.500, brand.500)'}
@@ -81,6 +83,8 @@ const PriceCard = (props: PriceProps) => {
               columns={2}
               gridTemplateColumns='auto 1fr'
               color='subtleText'
+              fontSize='sm'
+              gap={2}
             >
               <ListIcon as={FaCheck} mt={1} color='green.500' />
               <chakra.span>{item.value}</chakra.span>
