@@ -12,13 +12,13 @@ import { Header } from '../../core/Header';
 
 const SplitWithImage = (props) => {
   return (
-    <SimpleGrid columns={{ base: 1, lg: 2 }} gap={16} maxW='1920px'>
+    <SimpleGrid columns={{ base: 1, xl: 2 }} gap={16} maxW='1920px'>
       <Stack
         gridRow={1}
-        gridColumn={!props.flip ? { base: 1 } : { base: 1, lg: 2 }}
+        gridColumn={!props.flip ? { base: 1 } : { base: 1, xl: 2 }}
         spacing={8}
         w='full'
-        p={{ base: 4, lg: 16 }}
+        p={{ base: 4, xl: 16 }}
         alignSelf='center'
       >
         <Box w='full'>
@@ -35,9 +35,9 @@ const SplitWithImage = (props) => {
         </Box>
         <Stack spacing={8} maxW='lg' w='full' alignSelf='center'>
           <SimpleGrid columns={2} templateColumns='auto 1fr' gap={2}>
-            <Icon as={FaChevronRight} mt={2} color='brand.600' />
+            <Icon as={FaChevronRight} mt={3.5} color='brand.600' />
             <Box>
-              <Text fontWeight='bold' textTransform='uppercase'>
+              <Text fontSize='2xl' letterSpacing='wider'>
                 Maxime ullam
               </Text>
               <Text>
@@ -47,9 +47,9 @@ const SplitWithImage = (props) => {
             </Box>
           </SimpleGrid>
           <SimpleGrid columns={2} templateColumns='auto 1fr' gap={2}>
-            <Icon as={FaChevronRight} mt={2} color='brand.600' />
+            <Icon as={FaChevronRight} mt={3.5} color='brand.600' />
             <Box>
-              <Text fontWeight='bold' textTransform='uppercase'>
+              <Text fontSize='2xl' letterSpacing='wider'>
                 Dolor aute
               </Text>
               <Text>
@@ -59,9 +59,9 @@ const SplitWithImage = (props) => {
             </Box>
           </SimpleGrid>
           <SimpleGrid columns={2} templateColumns='auto 1fr' gap={2}>
-            <Icon as={FaChevronRight} mt={2} color='brand.600' />
+            <Icon as={FaChevronRight} mt={3.5} color='brand.600' />
             <Box>
-              <Text fontWeight='bold' textTransform='uppercase'>
+              <Text fontSize='2xl' letterSpacing='wider'>
                 Tempor eu minim
               </Text>
               <Text>
@@ -71,9 +71,9 @@ const SplitWithImage = (props) => {
             </Box>
           </SimpleGrid>
           <SimpleGrid columns={2} templateColumns='auto 1fr' gap={2}>
-            <Icon as={FaChevronRight} mt={2} color='brand.600' />
+            <Icon as={FaChevronRight} mt={3.5} color='brand.600' />
             <Box>
-              <Text fontWeight='bold' textTransform='uppercase'>
+              <Text fontSize='2xl' letterSpacing='wider'>
                 Elit consequat
               </Text>
               <Text>
@@ -86,8 +86,8 @@ const SplitWithImage = (props) => {
       </Stack>
 
       <SimpleGrid
-        gridRow={{ base: 2, lg: 1 }}
-        gridColumn={!props.flip ? { base: 1, lg: 2 } : 1}
+        gridRow={{ base: 2, xl: 1 }}
+        gridColumn={!props.flip ? { base: 1, xl: 2 } : 1}
         columns={2}
         gap={2}
         px={2}
@@ -112,9 +112,10 @@ const SplitWithImage = (props) => {
               h='full'
               lineHeight='normal'
               textAlign='center'
-              fontSize={['xl', , '5xl']}
-              fontWeight='black'
+              fontSize={['md', '2xl', '4xl']}
+              fontWeight='semibold'
               textTransform='uppercase'
+              p={4}
             >
               100% satisfaction
             </Text>

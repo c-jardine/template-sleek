@@ -12,6 +12,7 @@ import {
 import { GridItem, SimpleGrid } from '@chakra-ui/react';
 import { FaDatabase } from '@react-icons/all-files/fa/FaDatabase';
 import { FaNetworkWired } from '@react-icons/all-files/fa/FaNetworkWired';
+import { Parallax } from 'react-scroll-parallax';
 import { Button } from '../../core/Button';
 
 const features = [
@@ -28,14 +29,26 @@ const features = [
 ];
 const CtaLeftAlign = () => {
   return (
-    <Box w='100vw' h={{ lg: '100vh' }} mt={-12}>
-      <Box
-        display={{ base: 'none', lg: 'block' }}
-        w='33%'
-        h='100vh'
-        bg='cardBackground'
-        position='absolute'
-      />
+    <Box w='100vw' h={{ lg: '100vh' }}>
+      <Parallax
+        scaleX={[2, 1]}
+        opacity={[2, 0]}
+        style={{
+          position: 'absolute',
+          width: '33%',
+          height: '100vh',
+          transformOrigin: 'top left',
+        }}
+      >
+        <Box
+          left={-64}
+          display={{ base: 'none', lg: 'block' }}
+          w='full'
+          h='full'
+          bg='cardBackground'
+          position='absolute'
+        />
+      </Parallax>
       <Container
         position='relative'
         maxW='7xl'
@@ -47,24 +60,34 @@ const CtaLeftAlign = () => {
         justifyContent='center'
         alignItems='center'
       >
-        <Stack direction={{ base: 'column', lg: 'row' }} gap={12}>
-          <Image
-            boxSize='375px'
-            objectFit='cover'
-            src='https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
-            alt='People consulting at a desk'
-            rounded='lg'
-            overflow='hidden'
-            filter='saturate(50%)'
-          />
+        <Stack direction={{ base: 'column', lg: 'row' }} gap={8}>
+          <Parallax speed={10}>
+            <Image
+              boxSize='375px'
+              objectFit='cover'
+              src='https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
+              alt='People consulting at a desk'
+              overflow='hidden'
+              filter='saturate(50%)'
+              w='full'
+            />
+          </Parallax>
+
           <Stack direction='column' spacing={10} justifyContent='center'>
-            <chakra.h1 textStyle='h1' textAlign='left' color='headerText'>
-              Lorem ipsum
+            <chakra.h1
+              fontSize={['3xl', , '5xl']}
+              letterSpacing='wider'
+              lineHeight='shorter'
+              textAlign='left'
+              color='headerText'
+              fontWeight='semibold'
+            >
+              <chakra.span>Lorem ipsum</chakra.span>
               <chakra.span textStyle='gradient'>
                 {' '}
                 dolor sit amet{' '}
               </chakra.span>{' '}
-              <br /> ut labore magna aliqua
+              <chakra.span>ut labore magna aliqua</chakra.span>
             </chakra.h1>
             <Text maxW='700px' color='bodyText'>
               Officia in impedit commodi saepe voluptas sed culpa vero, qui
@@ -80,11 +103,15 @@ const CtaLeftAlign = () => {
                       w={6}
                       h={6}
                       color='brand.500'
-                      mt={1}
+                      mt={2.5}
                     />
                   </GridItem>
                   <GridItem w='full'>
-                    <Text variant='feature' color='headerText'>
+                    <Text
+                      color='headerText'
+                      fontSize='2xl'
+                      letterSpacing='wider'
+                    >
                       {feature.title}
                     </Text>
                     <Text variant='details' color='bodyText'>

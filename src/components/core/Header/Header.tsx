@@ -10,7 +10,9 @@ const Header = (props: HeaderProps) => {
       <chakra.h2
         textStyle={'gradient'}
         fontSize={['3xl', , '5xl']}
-        fontWeight='bold'
+        lineHeight='shorter'
+        letterSpacing='wider'
+        fontWeight='semibold'
         mb={4}
         textAlign={!props.center ? 'left' : 'center'}
       >

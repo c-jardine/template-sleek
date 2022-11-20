@@ -1,4 +1,5 @@
 import { Box, chakra, SimpleGrid, Stack, Text } from '@chakra-ui/react';
+import { Parallax } from 'react-scroll-parallax';
 import { Button } from '../src/components/core/Button';
 import { Header } from '../src/components/core/Header';
 import { Input } from '../src/components/core/Input';
@@ -9,19 +10,17 @@ import { PageLayout } from '../src/layouts/PageLayout';
 const ContactPage = () => {
   return (
     <PageLayout>
-      <Box
-        position='sticky'
-        top={32}
-        zIndex={0}
-        mb={20}
-        px={{ base: 4, lg: 0 }}
-      >
-        <Header
-          center
-          title='Officiis nisi temporibus praesentium magni adipisci'
-          subtitle='Contact Us'
-          description='Cupidatat ad Lorem dolore duis. Duis consectetur amet qui consectetur exercitation proident. Sunt commodo dolor pariatur aliquip cillum id aliquip dolore occaecat. Do ad sint consequat laboris aliqua sint ad.'
-        />
+      <Box position='sticky' top={32} zIndex={0} px={{ base: 4, lg: 0 }}>
+        <Parallax speed={20} opacity={[3, 0]}>
+          <Box my={16}>
+            <Header
+              center
+              title='Officiis nisi temporibus praesentium magni adipisci'
+              subtitle='Contact Us'
+              description='Cupidatat ad Lorem dolore duis. Duis consectetur amet qui consectetur exercitation proident. Sunt commodo dolor pariatur aliquip cillum id aliquip dolore occaecat. Do ad sint consequat laboris aliqua sint ad.'
+            />
+          </Box>
+        </Parallax>
       </Box>
       <Box
         position='relative'

@@ -82,9 +82,7 @@ const Card = (props: StepCardProps) => {
         </Circle>
         <chakra.h3
           as={Link}
-          textStyle='link'
-          fontSize='2xl'
-          fontWeight='semibold'
+          fontSize='3xl'
           letterSpacing='wider'
           color='headerText'
         >

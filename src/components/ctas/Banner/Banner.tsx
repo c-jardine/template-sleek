@@ -8,6 +8,9 @@ import {
   Text,
 } from '@chakra-ui/react';
 import { Button } from '../../core/Button';
+import { Poppins } from '@next/font/google';
+
+const poppins = Poppins({ weight: '500' });
 
 const Banner = () => {
   return (
@@ -19,7 +22,14 @@ const Banner = () => {
       rounded='lg'
     >
       <Box>
-        <chakra.h2 textStyle='h2' color='headerText'>Ready to get started?</chakra.h2>
+        <chakra.h2
+          className={poppins.className}
+          fontSize={['5xl', , '6xl']}
+          lineHeight='shorter'
+          color='headerText'
+        >
+          Ready to get started?
+        </chakra.h2>
         <Text variant='feature' color='bodyText' fontSize={24}>
           Get in touch or read more.
         </Text>

@@ -28,6 +28,7 @@ const HomePage = () => {
         </Flex>
         <Testimonials />
         <Banner />
+        <Box h={0} />
       </PageLayout>
     </>
   );

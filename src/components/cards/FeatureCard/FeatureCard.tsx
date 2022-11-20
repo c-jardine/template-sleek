@@ -35,11 +35,11 @@ const FeatureCard = (props: FeatureCardProps) => {
         </Flex>
         <Stack p={4}>
           <chakra.h3
-            textAlign='left'
-            fontSize='xl'
-            mt={6}
-            letterSpacing='wide'
+            mt={4}
             color='headerText'
+            fontSize='2xl'
+            letterSpacing='wider'
+            textAlign='left'
           >
             {props.heading}
           </chakra.h3>
