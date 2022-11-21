@@ -29,7 +29,7 @@ const features = [
 ];
 const CtaLeftAlign = () => {
   return (
-    <Box w='100vw' h={{ lg: '100vh' }}>
+    <Box w='100vw' h={{ lg: 'calc(100vh - 4rem)' }}>
       <Parallax
         scaleX={[2, 1]}
         opacity={[2, 0]}
@@ -51,6 +51,7 @@ const CtaLeftAlign = () => {
       </Parallax>
       <Container
         position='relative'
+        mt={16}
         maxW='7xl'
         px={{ base: 6, lg: 10 }}
         py={14}
@@ -75,7 +76,7 @@ const CtaLeftAlign = () => {
 
           <Stack direction='column' spacing={10} justifyContent='center'>
             <chakra.h1
-              fontSize={['3xl', , '5xl']}
+              fontSize={['3xl', , '4xl']}
               letterSpacing='wider'
               lineHeight='shorter'
               textAlign='left'
@@ -103,18 +104,18 @@ const CtaLeftAlign = () => {
                       w={6}
                       h={6}
                       color='brand.500'
-                      mt={2.5}
+                      mt={1.5}
                     />
                   </GridItem>
                   <GridItem w='full'>
                     <Text
                       color='headerText'
-                      fontSize='2xl'
+                      fontSize='lg'
                       letterSpacing='wider'
                     >
                       {feature.title}
                     </Text>
-                    <Text variant='details' color='bodyText'>
+                    <Text variant='details' color='bodyText' fontSize='sm'>
                       {feature.detail}
                     </Text>
                   </GridItem>
