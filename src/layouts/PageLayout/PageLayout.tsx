@@ -2,7 +2,7 @@ import { Box, Stack } from '@chakra-ui/react';
 import React from 'react';
 import { Poppins } from '@next/font/google';
 
-const poppins = Poppins({ weight: ['300', '400', '500', '600', '700'], subsets: ['latin'] });
+const poppins = Poppins({ weight: ['300', '400', '500', '600', '700'] });
 
 const PageLayout = (props: { children: React.ReactNode }) => {
   return (
