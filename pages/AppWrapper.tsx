@@ -6,15 +6,15 @@ import {
 } from '@chakra-ui/react';
 import { FaMoon } from '@react-icons/all-files/fa/FaMoon';
 import { FaSun } from '@react-icons/all-files/fa/FaSun';
-import { useDispatch, useSelector } from 'react-redux';
 import { ParallaxProvider } from 'react-scroll-parallax';
+import { useAppDispatch, useAppSelector } from '../lib/hooks/redux';
 import { asyncToggleTheme } from '../src/redux/slices/themeSlice';
 import { RootState } from '../src/redux/store';
 import chakraTheme from '../src/styles/theme/theme';
 
 const AppWrapper = (props) => {
-  const { darkMode } = useSelector((state: RootState) => state.themeReducer);
-  const dispatch = useDispatch();
+  const { darkMode } = useAppSelector((state: RootState) => state.themeReducer);
+  const dispatch = useAppDispatch();
 
   return (
     <ParallaxProvider>
