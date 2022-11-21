@@ -2,6 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  optimizeFonts: false,
   redirects: async () => {
     return [
       // Redirects unpaginated author url to the first paginated result.

@@ -12,7 +12,7 @@ const ContactColumn = () => {
       <Stack spacing={12}>
         <SimpleGrid templateColumns='auto 1fr' columnGap={4} rowGap={0}>
           <GridItem w='max-content' mt={-1}>
-            <Icon as={FaLocationArrow} w={6} h={6} color='headerText' />
+            <Icon as={FaLocationArrow} w={4} h={4} color='headerText' />
           </GridItem>
           <GridItem>
             <Text color='white' lineHeight={1} fontWeight='semibold'>
@@ -33,7 +33,7 @@ const ContactColumn = () => {
 
         <SimpleGrid templateColumns='auto 1fr' columnGap={4} rowGap={0}>
           <GridItem w='max-content' mt={-1}>
-            <Icon as={FaEnvelope} w={6} h={6} color='headerText' />
+            <Icon as={FaEnvelope} w={4} h={4} color='headerText' />
           </GridItem>
           <GridItem>
             <Text color='white' lineHeight={1} fontWeight='semibold'>
@@ -49,7 +49,7 @@ const ContactColumn = () => {
 
         <SimpleGrid templateColumns='auto 1fr' columnGap={4} rowGap={0}>
           <GridItem w='max-content' mt={-1}>
-            <Icon as={FaPhone} w={6} h={6} color='headerText' />
+            <Icon as={FaPhone} w={4} h={4} color='headerText' />
           </GridItem>
           <GridItem>
             <Text color='white' lineHeight={1} fontWeight='semibold'>

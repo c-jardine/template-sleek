@@ -33,6 +33,7 @@ const Pricing: NextPage = () => {
         <PriceCards prices={Prices} />
       </Box>
       <Banner />
+      <Box h={0} />
     </PageLayout>
   );
 };
