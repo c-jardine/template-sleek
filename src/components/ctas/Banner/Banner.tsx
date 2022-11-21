@@ -39,8 +39,8 @@ const Banner = () => {
         spacing={4}
         w={{ base: '100%', sm: 'auto' }}
       >
-        <Button>Get Started</Button>
-        <Button variant='light'>Learn more</Button>
+        <Button ariaLabel='Get started'>Get Started</Button>
+        <Button ariaLabel='Learn more' variant='light'>Learn more</Button>
       </Stack>
     </Stack>
   );
