@@ -20,7 +20,7 @@ const Textarea = (props: TextareaProps & { label: string }) => {
     >
       <FormControl>
         <FormLabel
-          bg='background'
+          bg='cardBackground'
           color={focused ? 'brand.500' : 'bodyText'}
           position='absolute'
           top={2}
